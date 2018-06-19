@@ -11,6 +11,6 @@ else {
 const html = fs.readFileSync('index.html','utf8');
 response.end(html);}
 });
-
-server.listen(3001);
+console.log('port = ', process.env.PORT)
+server.listen(process.env.PORT || 3001);
 console.log('Server started!');
